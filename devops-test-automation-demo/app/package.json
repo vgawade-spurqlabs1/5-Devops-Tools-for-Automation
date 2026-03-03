@@ -1,0 +1,24 @@
+{
+  "name": "demo-app",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "build": "node -c src/server.js && node -c src/app.js && node -c src/utils/math.js",
+    "lint": "eslint \"src/**/*.js\" \"test/**/*.js\"",
+    "test:unit": "jest --runInBand --ci --reporters=default --reporters=jest-junit"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.8.0",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
+  },
+  "jest-junit": {
+    "outputDirectory": "test-results/unit",
+    "outputName": "junit.xml"
+  }
+}

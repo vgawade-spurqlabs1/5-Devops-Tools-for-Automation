@@ -1,0 +1,19 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --runInBand --ci --reporters=default --reporters=jest-junit"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
+  },
+  "jest-junit": {
+    "outputDirectory": "test-results/api",
+    "outputName": "junit.xml"
+  }
+}
